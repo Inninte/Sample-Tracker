@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sample Tracker</string>
+    <string name="action_about">About</string>
+    <string name="action_help">Help</string>
+    <string name="help_text">To add a new sample, just press the big plus button.\n\nTo edit the fields, all you need to do is tap them. Remember to press the done key (Checkmark on Android) if you wish to save the item.\n\nTo delete a sample, just swipe the sample away. If you shutdown the app, the undo button will not be able to recover your samples!\n\nCurrently, the app technically only supports Dialysis. So the icon is a bucket and all the parameters relate to Dialysis!</string>
+    <string name="help_activity_label">Help</string>
+    <string name="about_text">This is a project that I\'m going to be working on. :D</string>
+    <string name="copy_right_stuff_text">Icons from: https://icons8.com/icon/20907/Bitbucket and www.flaticon.com (Notepad by Madebyoliver) </string>
+    <string name="about_activity_label">About</string>
+</resources>

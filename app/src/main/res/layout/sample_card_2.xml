@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialysis_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:descendantFocusability="beforeDescendants">
+
+    <RelativeLayout
+        android:id="@+id/initial_sample_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sample_image"
+            android:layout_width="@dimen/sample_image_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:src="@drawable/icons8_bitbucket" />
+
+
+        <EditText
+            android:id="@+id/sample_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sample_image"
+            android:background="@null"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Sample Name..."
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/extension_sample_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/initial_sample_view"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="@dimen/sample_image_width"
+        android:layout_marginRight="16dp"
+        android:visibility="visible">
+
+        <TableLayout
+            android:id="@+id/sample_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Started: "
+                    android:textSize="@dimen/sample_info_text_size" />
+
+                <EditText
+                    android:id="@+id/sample_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="dd/mm/yy"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/card_text_margins"
+                    android:textSize="@dimen/sample_info_text_size" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Days left: "
+                    android:textSize="@dimen/sample_info_text_size" />
+
+                <EditText
+                    android:id="@+id/sample_days_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="0"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/card_text_margins"
+                    android:textSize="@dimen/sample_info_text_size" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change at: "
+                    android:textSize="@dimen/sample_info_text_size" />
+
+                <EditText
+                    android:id="@+id/sample_change_at"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="14:00"
+                    android:imeOptions="actionDone"
+                    android:inputType="time"
+                    android:maxLines="1"
+                    android:paddingRight="@dimen/card_text_margins"
+                    android:textSize="@dimen/sample_info_text_size" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/sample_categories"
+            android:layout_marginRight="@dimen/card_text_margins"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Add Item"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/expand_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/extension_sample_view"
+        android:background="@color/primaryLight">
+
+        <TextView
+            android:id="@+id/expand_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="?android:selectableItemBackground"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:text="More Info" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/expand_button"
+        android:background="@android:color/darker_gray" />
+
+
+</RelativeLayout>
